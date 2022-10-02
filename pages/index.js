@@ -3,7 +3,7 @@ import { Product, HeroBanner, FooterBanner } from '../components';
 import { client } from '../lib/client';
 
 export default function index({ products, bannerData }) {
-  console.log(bannerData);
+  //console.log(bannerData);
 
   return (
     <>
@@ -14,10 +14,10 @@ export default function index({ products, bannerData }) {
       </div>
       <div className='products-container'>
         {products?.map((product) => {
-          return product.name;
+          return <Product key={product._id} product={product} />;
         })}
       </div>
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   );
 }
