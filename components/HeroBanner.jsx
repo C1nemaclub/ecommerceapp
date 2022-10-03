@@ -15,7 +15,7 @@ export default function HeroBanner({ heroBanner }) {
           className='hero-banner-image'
         />
         <div>
-          <Link href={`/products/${heroBanner.product}`}>
+          <Link href={`/product/${heroBanner.product}`}>
             <button type='button'>{heroBanner.buttonText}</button>
           </Link>
           <div className='desc'>
